@@ -16,7 +16,7 @@ module.exports = {
     },
   },
   daisyui: {
-    theme: ["drakula"],
+    theme: ["dracula"],
   },
   plugins: [daisyui],
 };
