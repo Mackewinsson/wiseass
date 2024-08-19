@@ -32,4 +32,4 @@ const CourseSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Course", CourseSchema);
+export default mongoose.models.Course || mongoose.model("Course", CourseSchema);
