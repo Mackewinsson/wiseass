@@ -18,6 +18,12 @@ const UserSchema = new mongoose.Schema(
       enum: ["free", "pro"],
       default: "free",
     },
+    purchasedCourses: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Course", // Reference to the Course model
+      },
+    ],
   },
   {
     timestamps: true,
