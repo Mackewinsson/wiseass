@@ -7,7 +7,8 @@ const { getSession } = require("@auth0/nextjs-auth0");
 
 export default async function createUser() {
   try {
-    const { user } = await getSession();
+    const sesion = await getSession();
+    const user = sesion.user;
     if (!user) {
       throw new Error("User not found");
     }
