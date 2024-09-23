@@ -3,9 +3,11 @@ import { redirect } from "next/navigation";
 
 export default async function Home() {
   const user = await createUser();
+  console.log(user);
+
   const handleRedirect = () => {
-    if (user?.purchasedCourses?.length > 0) {
-      redirect(`/school/courses/${user.purchasedCourses[0]._id}`);
+    if (user) {
+      redirect(`/school/courses`);
     }
   };
   handleRedirect();

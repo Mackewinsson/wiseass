@@ -1,6 +1,6 @@
 "use client";
 import Sidebar from "@component/Sidebar";
-import { getCourses } from "../../../../actions/users/getCourses";
+import { getCourse } from "../../../../actions/users/getCourse";
 import { useEffect, useState } from "react";
 
 export default function CourseDetail({ params }) {
@@ -8,7 +8,7 @@ export default function CourseDetail({ params }) {
   const [selectedClass, setSelectedClass] = useState(null);
 
   const fetchCourse = async () => {
-    const course = await getCourses(params.id);
+    const course = await getCourse(params.id);
     setCourse(course);
   };
 
